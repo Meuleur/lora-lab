@@ -26,8 +26,19 @@ build/
 *.safetensors
 data/raw/
 data/processed/
+
+# runs/ : on commit uniquement les artefacts légers (adapter LoRA + logs).
+# Tout le reste (checkpoints intermédiaires, optimizer state, tokenizer dupliqué)
+# est ignoré.
 runs/*
 !runs/.gitkeep
+!runs/qwen05b_lora_mps/
+runs/qwen05b_lora_mps/*
+!runs/qwen05b_lora_mps/adapter_model.safetensors
+!runs/qwen05b_lora_mps/adapter_config.json
+!runs/qwen05b_lora_mps/training.log
+!runs/qwen05b_lora_mps/sample_generations.md
+!runs/qwen05b_lora_mps/trainer_state.json
 *.csv.gz
 *.parquet
 
@@ -48,6 +59,7 @@ node_modules/
 dist/
 .next/
 *.log
+!runs/qwen05b_lora_mps/training.log
 
 # Claude Code local
 .claude/local/
