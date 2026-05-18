@@ -18,11 +18,17 @@ def test_parse_args_basic():
     ns = parse_args(["--config", "configs/tinyllama_r8.yaml"])
     assert ns.config == Path("configs/tinyllama_r8.yaml")
     assert ns.dry_run is False
+    assert ns.max_steps is None
 
 
 def test_parse_args_dry_run_flag():
     ns = parse_args(["--config", "x.yaml", "--dry-run"])
     assert ns.dry_run is True
+
+
+def test_parse_args_max_steps():
+    ns = parse_args(["--config", "x.yaml", "--max-steps", "100"])
+    assert ns.max_steps == 100
 
 
 def test_dry_run_prints_config_without_training():
