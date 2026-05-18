@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Modeles & data lourdes
+*.pt
+*.pth
+*.h5
+*.bin
+*.gguf
+*.safetensors
+data/raw/
+data/processed/
+runs/*
+!runs/.gitkeep
+*.csv.gz
+*.parquet
+
+# Env & secrets
+.env
+.env.local
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Node
+node_modules/
+dist/
+.next/
+*.log
+
+# Claude Code local
+.claude/local/

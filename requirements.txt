@@ -1,0 +1,18 @@
+# Core
+torch>=2.2
+transformers>=4.40
+datasets>=2.18
+accelerate>=0.30
+peft>=0.10
+trl>=0.8
+sentencepiece>=0.2
+huggingface-hub>=0.20
+
+# Quantization (CUDA only)
+bitsandbytes>=0.43; sys_platform == "linux"
+
+# Config / utilities
+pyyaml>=6.0
+
+# Tests
+pytest>=8.0
