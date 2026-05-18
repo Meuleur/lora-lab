@@ -16,7 +16,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Callable, Dict, Iterable, List, Optional
 
-ALPACA_FR_NAME = "bofenghuang/vigogne-instruct-66k"
+ALPACA_FR_NAME = "jpacifico/French-Alpaca-dataset-Instruct-55K"
 OASST_NAME = "OpenAssistant/oasst1"
 
 

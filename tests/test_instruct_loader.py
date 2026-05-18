@@ -41,7 +41,7 @@ ALPACA_ROWS = [
 
 
 def _alpaca_loader(name, split):
-    assert name == "bofenghuang/vigogne-instruct-66k"
+    assert name == "jpacifico/French-Alpaca-dataset-Instruct-55K"
     assert split == "train"
     return list(ALPACA_ROWS)
 
