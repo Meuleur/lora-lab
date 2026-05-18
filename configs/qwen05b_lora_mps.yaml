@@ -1,0 +1,34 @@
+# Run réel sur Apple Silicon (MPS, ex. M1 Pro 16 GB).
+# Pas de quantization (bnb = CUDA only), pas de bf16/fp16 (instables sur MPS).
+model_name: Qwen/Qwen2.5-0.5B
+
+data:
+  dataset: alpaca_fr
+  split: train
+  subset: 500
+  max_seq_length: 512
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, v_proj]
+  bias: none
+  task_type: CAUSAL_LM
+
+quant:
+  load_in_4bit: false
+  load_in_8bit: false
+
+training:
+  output_dir: runs/qwen05b_lora_mps
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  num_train_epochs: 1.0
+  learning_rate: 2.0e-4
+  warmup_ratio: 0.03
+  logging_steps: 10
+  save_steps: 50
+  bf16: false
+  fp16: false
+  seed: 42
