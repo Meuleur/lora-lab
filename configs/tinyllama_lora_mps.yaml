@@ -1,0 +1,35 @@
+# TinyLlama-1.1B + LoRA r=8 alpha=16 sur Apple Silicon (MPS, float32).
+# Configuration MPS-friendly identique à qwen05b_lora_mps.yaml mais sur
+# le modèle TinyLlama-Chat (Llama-2 arch, 22 transformer layers).
+model_name: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
+data:
+  dataset: alpaca_fr
+  split: train
+  subset: 500
+  max_seq_length: 512
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, v_proj]
+  bias: none
+  task_type: CAUSAL_LM
+
+quant:
+  load_in_4bit: false
+  load_in_8bit: false
+
+training:
+  output_dir: runs/tinyllama_lora_mps
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  num_train_epochs: 1.0
+  learning_rate: 2.0e-4
+  warmup_ratio: 0.03
+  logging_steps: 10
+  save_steps: 50
+  bf16: false
+  fp16: false
+  seed: 42
