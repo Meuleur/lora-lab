@@ -1,0 +1,39 @@
+# Qwen2.5-0.5B + LoRA r=8 ciblant attention ET MLP (Apple Silicon, MPS, fp32).
+# À comparer avec configs/qwen05b_lora_mps.yaml (attention only) sur la même
+# loss/dataset/seed pour mesurer l'effet "attention only vs attention + MLP".
+model_name: Qwen/Qwen2.5-0.5B
+
+data:
+  dataset: alpaca_fr
+  split: train
+  subset: 500
+  # 256 au lieu de 512 : avec 7 modules cibles (q,k,v,o,gate,up,down) on a
+  # ~6 M params LoRA actifs sur Qwen 0.5B, donc on coupe les activations pour
+  # rester confortable dans 16 GB unified memory (sinon MPS swap > 60 s/step).
+  max_seq_length: 256
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  # attention (q,k,v,o) + MLP (gate, up, down) = 7 modules par layer
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  bias: none
+  task_type: CAUSAL_LM
+
+quant:
+  load_in_4bit: false
+  load_in_8bit: false
+
+training:
+  output_dir: runs/qwen05b_lora_mlp_mps
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  num_train_epochs: 1.0
+  learning_rate: 2.0e-4
+  warmup_ratio: 0.03
+  logging_steps: 10
+  save_steps: 50
+  bf16: false
+  fp16: false
+  seed: 42

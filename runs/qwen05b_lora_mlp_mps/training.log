@@ -1,0 +1,43 @@
+2026-05-19 12:47:33,473 INFO __main__ :: device=mps bf16=False fp16=False
+2026-05-19 12:47:33,652 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:47:33,667 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:47:33,793 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:47:33,809 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-19 12:47:33,928 INFO httpx :: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-0.5B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-19 12:47:34,050 INFO httpx :: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-0.5B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-19 12:47:34,355 INFO httpx :: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-0.5B "HTTP/1.1 200 OK"
+2026-05-19 12:47:34,357 INFO __main__ :: loading base model: Qwen/Qwen2.5-0.5B
+2026-05-19 12:47:34,475 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:47:34,490 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:47:34,618 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:47:34,635 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:47:35,582 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:47:35,583 WARNING huggingface_hub.utils._http :: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-05-19 12:47:35,596 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/generation_config.json "HTTP/1.1 200 OK"
+2026-05-19 12:47:35,938 INFO __main__ :: loading dataset: alpaca_fr split=train subset=500
+2026-05-19 12:47:36,055 INFO httpx :: HTTP Request: HEAD https://huggingface.co/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:47:36,069 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/c13216a7a935baf62fb81efc56eed1739b222d2f/README.md "HTTP/1.1 200 OK"
+2026-05-19 12:47:36,186 INFO httpx :: HTTP Request: HEAD https://huggingface.co/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/resolve/c13216a7a935baf62fb81efc56eed1739b222d2f/French-Alpaca-dataset-Instruct-55K.py "HTTP/1.1 404 Not Found"
+2026-05-19 12:47:36,518 INFO httpx :: HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/jpacifico/French-Alpaca-dataset-Instruct-55K.py "HTTP/1.1 404 Not Found"
+2026-05-19 12:47:36,645 INFO httpx :: HTTP Request: GET https://huggingface.co/api/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/revision/c13216a7a935baf62fb81efc56eed1739b222d2f "HTTP/1.1 200 OK"
+2026-05-19 12:47:36,762 INFO httpx :: HTTP Request: HEAD https://huggingface.co/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/resolve/c13216a7a935baf62fb81efc56eed1739b222d2f/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-05-19 12:47:36,952 INFO httpx :: HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=jpacifico/French-Alpaca-dataset-Instruct-55K "HTTP/1.1 200 OK"
+2026-05-19 12:47:37,087 INFO httpx :: HTTP Request: GET https://huggingface.co/api/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/tree/c13216a7a935baf62fb81efc56eed1739b222d2f/data?recursive=true&expand=false "HTTP/1.1 404 Not Found"
+2026-05-19 12:47:37,211 INFO httpx :: HTTP Request: GET https://huggingface.co/api/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/tree/c13216a7a935baf62fb81efc56eed1739b222d2f?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-05-19 12:47:37,437 INFO httpx :: HTTP Request: HEAD https://huggingface.co/datasets/jpacifico/French-Alpaca-dataset-Instruct-55K/resolve/c13216a7a935baf62fb81efc56eed1739b222d2f/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-05-19 12:47:37,637 INFO __main__ :: dataset size: 500 examples
+2026-05-19 12:47:39,541 INFO __main__ :: starting training (max_steps=100)
+2026-05-19 12:49:08,971 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:49:08,990 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:49:09,112 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:49:09,126 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:53:03,663 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:53:03,682 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:53:03,806 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:53:03,820 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:53:04,919 INFO __main__ :: train metrics: {'train_runtime': 325.2363, 'train_samples_per_second': 1.23, 'train_steps_per_second': 0.307, 'total_flos': 113030210042112.0, 'train_loss': 1.8184854316711425}
+2026-05-19 12:53:05,043 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:53:05,058 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:53:05,174 INFO httpx :: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-0.5B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-19 12:53:05,189 INFO httpx :: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-0.5B/060db6499f32faf8b98477b0a26969ef7d8b9987/config.json "HTTP/1.1 200 OK"
+2026-05-19 12:53:05,396 INFO __main__ :: saved adapter to runs/qwen05b_lora_mlp_mps
