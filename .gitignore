@@ -39,6 +39,13 @@ runs/qwen05b_lora_mps/*
 !runs/qwen05b_lora_mps/training.log
 !runs/qwen05b_lora_mps/sample_generations.md
 !runs/qwen05b_lora_mps/trainer_state.json
+!runs/tinyllama_lora_mps/
+runs/tinyllama_lora_mps/*
+!runs/tinyllama_lora_mps/adapter_model.safetensors
+!runs/tinyllama_lora_mps/adapter_config.json
+!runs/tinyllama_lora_mps/training.log
+!runs/tinyllama_lora_mps/sample_generations.md
+!runs/tinyllama_lora_mps/trainer_state.json
 *.csv.gz
 *.parquet
 
@@ -60,6 +67,7 @@ dist/
 .next/
 *.log
 !runs/qwen05b_lora_mps/training.log
+!runs/tinyllama_lora_mps/training.log
 
 # Claude Code local
 .claude/local/
